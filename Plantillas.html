@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartWeb - Galería de Plantillas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --orange-primary: #FF7F00;
+            --orange-light: #FFAB58;
+            --orange-dark: #D66700;
+        }
+        
+        body {
+            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--orange-primary);
+        }
+        
+        .navbar-brand span {
+            color: var(--orange-dark);
+        }
+        
+        .btn-orange {
+            background-color: var(--orange-primary);
+            border-color: var(--orange-primary);
+            color: white;
+        }
+        
+        .btn-orange:hover {
+            background-color: var(--orange-dark);
+            border-color: var(--orange-dark);
+            color: white;
+        }
+        
+        .page-header {
+            background-color: white;
+            padding: 3rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-category {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--orange-primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .card-title {
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .filters-section {
+            background-color: #f8f9fa;
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-btn {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--orange-primary);
+            border-color: var(--orange-primary);
+            color: white;
+        }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            margin-top: 3rem;
+        }
+        
+        .text-orange {
+            color: var(--orange-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Smart<span>Web</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="ProyectoDiseño.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Plantillas.html">Plantillas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-orange" href="#">Prueba Gratis</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="mb-3">Galería de Plantillas</h1>
+                    <p class="lead text-muted">Explora nuestra colección de plantillas web profesionales para todo tipo de proyectos</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container" style="text-align: center;">
+            <i>"La potencia está en nuestras plantillas"<i>
+        </div>
+    </section>
+
+    <!-- Templates Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Template Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Business</span>
+                        <img src="https://img.freepik.com/vector-gratis/pagina-inicio-boda-floral-acuarela_23-2149424558.jpg" class="card-img-top" alt="Plantilla Business Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Business Pro</h5>
+                            <p class="card-text">Plantilla elegante y profesional para empresas que quieren destacar en línea.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Portfolio</span>
+                        <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/1223/posts/38032/image-upload/Leven.jpg" class="card-img-top" alt="Plantilla Creative Portfolio">
+                        <div class="card-body">
+                            <h5 class="card-title">Creative Portfolio</h5>
+                            <p class="card-text">Muestra tu trabajo de forma creativa con esta plantilla diseñada para artistas y diseñadores.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">E-commerce</span>
+                        <img src="https://s.tmimgcdn.com/scr/800x500/243500/tienda-en-linea-bootstrap-5-html-plantilla-de-sitio-web_243581-original.jpg" class="card-img-top" alt="Plantilla Shop Master">
+                        <div class="card-body">
+                            <h5 class="card-title">Shop Master</h5>
+                            <p class="card-text">Potencia tu tienda online con esta plantilla optimizada para e-commerce.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Blog</span>
+                        <img src="https://miposicionamientoweb.es/wp-content/uploads/2023/02/Carla-con-wifi.jpg.webp" class="card-img-top" alt="Plantilla Blog Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Pro</h5>
+                            <p class="card-text">Plantilla ideal para blogs con múltiples opciones de personalización y SEO optimizado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Landing Page</span>
+                        <img src="https://blog.hubspot.es/hubfs/media/16216960490296087.jpeg" class="card-img-top" alt="Plantilla Conversion Pro">
+                        <div class="card-body">
+                            <h5 class="card-title">Conversion Pro</h5>
+                            <p class="card-text">Aumenta tus conversiones con esta plantilla diseñada para landing pages de alto impacto.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Restaurant</span>
+                        <img src="https://www.octotable.com/wp-content/uploads/2021/12/website-builder-ristoranti.jpg" class="card-img-top" alt="Plantilla Gastro">
+                        <div class="card-body">
+                            <h5 class="card-title">Gastro</h5>
+                            <p class="card-text">Perfecta para restaurantes y cafeterías con secciones para menús, reservas y eventos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Education</span>
+                        <img src="https://iesmartinezm.es/wp-content/uploads/2020/06/nueva-web-iesmm-800x445.png" class="card-img-top" alt="Plantilla Academia">
+                        <div class="card-body">
+                            <h5 class="card-title">Academia</h5>
+                            <p class="card-text">Ideal para centros educativos, cursos online y plataformas de aprendizaje.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Travel</span>
+                        <img src="https://appdesign.dev/wp-content/uploads/2019/04/Pa%CC%81ginas-web-ejemplos-viajes.png" class="card-img-top" alt="Plantilla Traveler">
+                        <div class="card-body">
+                            <h5 class="card-title">Traveler</h5>
+                            <p class="card-text">Diseñada para agencias de viajes, blogs de viajeros y servicios turísticos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Health</span>
+                        <img src="https://s.tmimgcdn.com/scr/400x250/73500/binko-plantilla-de-pagina-de-destino-html-de-la-clinica-privada-futurista_73546-0-original.jpg" class="card-img-top" alt="Plantilla MediCare">
+                        <div class="card-body">
+                            <h5 class="card-title">MediCare</h5>
+                            <p class="card-text">Perfecta para clínicas, consultas médicas y servicios de salud.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 10 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Business</span>
+                        <img src="https://www.hubspot.com/hs-fs/hubfs/lemon%20(1).jpg?width=650&height=425&name=lemon%20(1).jpg" class="card-img-top" alt="Plantilla Corporate Plus">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Plus</h5>
+                            <p class="card-text">Solución completa para grandes empresas con múltiples departamentos.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 11 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">Portfolio</span>
+                        <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/06/Portfolio-website-of-the-product-designer-and-front-end-developer-Adham-Dannaway-1024x869.webp" class="card-img-top" alt="Plantilla Designer">
+                        <div class="card-body">
+                            <h5 class="card-title">Designer</h5>
+                            <p class="card-text">Showcase minimalista para diseñadores gráficos y creativos visuales.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template Card 12 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <span class="card-category">E-commerce</span>
+                        <img src="https://cdn.shopify.com/s/files/1/0229/0839/files/PLATAFORMA-DE-ECOMMERCE-POPULAR-ESPANA.jpg?v=1659627623" class="card-img-top" alt="Plantilla Boutique">
+                        <div class="card-body">
+                            <h5 class="card-title">Boutique</h5>
+                            <p class="card-text">Diseño elegante para tiendas online de productos exclusivos y de lujo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">CreaPlantas</h5>
+                    <p class="text-muted">Transformando la forma en que las empresas crean su presencia online, con plantillas web profesionales y fáciles de usar.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="mb-3">Plantillas</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Business</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Portfolio</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">E-commerce</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="mb-3">Recursos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Guías</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Tutoriales</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Soporte</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h6 class="mb-3">Empresa</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Sobre nosotros</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Contacto</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Carreras</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Afiliados</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Términos</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Privacidad</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Cookies</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">© 2025 CreaPlantas. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"></script>
+    
+    <script>
+        // Simple filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Here you would normally implement actual filtering
+                    // This is just a visual demo
+                });
+            });
+        });
+    </script>
+</body>
+</html>
