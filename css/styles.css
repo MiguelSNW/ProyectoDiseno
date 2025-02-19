@@ -1,0 +1,36 @@
+:root {
+    --orange-primary: #FF7F00;
+    --orange-light: #FFAB58;
+    --orange-dark: #D66700;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--orange-primary);
+}
+
+.navbar-brand span {
+    color: var(--orange-dark);
+}
+
+.btn-orange {
+    background-color: var(--orange-primary);
+    border-color: var(--orange-primary);
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: var(--orange-dark);
+    border-color: var(--orange-dark);
+    color: white;
+}
