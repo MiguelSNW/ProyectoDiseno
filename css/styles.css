@@ -88,3 +88,19 @@ body {
     background-color: white;
     border-top: 1px solid rgba(0,0,0,0.05);
 }
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.text-orange {
+    color: var(--orange-primary);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--orange-primary);
+    margin-bottom: 1rem;
+}
